@@ -1,13 +1,222 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(9, 154, 154);
+  line-height: 1.6;
+}
+
+.heading{
+  text-align: center;
+  color: white;
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+
+}
+
+.feedbackList{
+  display: flex;
+  height: 100vh;
+  
+}
+.imgcon{
+  flex: 4;
+  justify-content: center;
+  align-items: center;
+  
+}
+.showfeedback{
+flex: 6;
+margin-left: 20px;
+}
+.feedbackimage{
+  object-fit: cover;
+  width: 600px;
+  height: 600px;
+  margin-left: 100px;
+  margin-top: 100px;
+  background-attachment: scroll;
+}
+
+.feedbackItem{
+  position: relative;
+border-radius: 20px;
+background-color: aquamarine;
+width: 45vw;
+height: 20vh;
+margin-top: 110px;
+margin-left: 80px;
+margin-bottom: 50px;
+}
+
+.review{
+  text-align: center;
+  font-weight: 900;
+  margin: 10px 5px 5px 5px ;
+  color:#fff;
+
+}
+.rating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(251, 221, 51);
+  text-align: center;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  vertical-align: middle;
+  color: black;
+}
+.states{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.states :nth-child(1){
+  margin-left: 20px;
+}
+.states :nth-child(2){
+  margin-right: 20px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formPart{
+border-radius: 20px;
+background-color: aquamarine;
+width: 25vw;
+height: 12vh; 
+}
+.formPart h2 {
+  color: #fff;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.inputGroup{
+  margin-left: 120px;
+}
+
+.inputGroup input{
+padding: 5px;
+margin: 5px;
+border-radius: 5px;
+border-style: none;
+
+}
+.inputGroup input:focus{
+  
+  outline: none;
+}
+
+
+.inputGroup button {
+  padding: 6px;
+  margin: 5px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(151, 55, 242);
+}
+
+.btn{
+  transition: all 0.2s ease;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+ .btn:active{
+  background-color: rgb(238, 77, 238);
+  transform: scale(98%);
+}
+.btn:disabled{
+  background-color: grey;
+}
+
+.warning{
+  color: red;
+}
+
+.rate {
+  display: block;
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  margin-left: 150px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.modify{
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  background-color: gold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.editBtn{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  background-color: gold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 5px;
+  margin-right: 35px;
 }
